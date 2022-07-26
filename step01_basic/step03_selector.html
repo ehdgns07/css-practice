@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step03_selector</title>
+    <style>
+        /* p {
+            color :red;
+            text-align:center;
+        } */
+
+        /* #p1 {
+            color:blue;
+        } */
+        
+        /* .right{
+            text-align:right;
+        } */
+        /* .font50{
+            font-size: 50px;
+        } */
+        /* .font40{
+            font-size: 40px;
+        } */
+
+        /* h3,h4{
+            color:green;
+            text-align:center;
+            font-weight: bold;
+        } */
+
+        /* 복합 선택자 */
+        li.berry{
+            color: red;
+        }
+
+        /* 하위 선택자 */
+        .fruits li {
+            color: blue;
+        }
+
+        /* 인접 형제 선택자 */
+        .berry + li {
+            color: gold;
+        }
+        /* 일반 형제 선택자 */
+        .berry ~ li {
+            color: green;
+        }
+
+        /* 가상 클래스(구현 하지 않았지만 상황에 대해서 미리 지정하는 클래스) 선택자 : */
+        a:link{
+            background-color: yellow;
+        }
+        /* 방문한 링크 */
+        a:visited{
+            background-color: cyan;
+        }
+        /* 마우스를 링크 위에 올려 둘때 */
+        a:hover{
+            background-color: hotpink;
+        }
+        /* 클릭한 상태 */
+        a:active{
+            background-color: greenyellow;
+        }
+        /* 텍스트 입력하는 상태 */
+        input:focus{
+            background-color: gold;
+        }
+        /* :first-child/last-child  */
+        /* 해당하는 요소가 해당 위치에 존재 해야만 적용됨 */
+        .fruits li:last-child{
+            color: red;
+        }
+        /* :nth-child() */
+        /* (2), (2n), (n+3)*/
+        .fruits li:nth-child(n+3){
+            color:aqua;
+        }
+
+        /* .fruits p:nth-child(1){
+            color:red;
+        } */
+
+        /* 해당 타입중에 몇번째를 선택해서 입힐 것인가 */
+        /* .fruits p:nth-of-type(1){
+            color: red;
+        } */
+        /* 태그만 지정 가능하다 */
+        .fruits .berry:nth-of-type(1){
+            color: red;
+            /* 안됨 */
+        }
+
+        /* 부정 선택자 */
+        .fruits li:not(.berry){
+            color: red;
+        }
+
+        /* 가상 요소 선택자 :: */
+        /* before -> 앞쪽에 적용 */
+        .before li::before{
+            content : "숫자";
+            color : blue;
+        }
+
+        /* 속성 선택자 [attr]*/
+        [class^="btn-"]{
+            font-weight: bold;
+            border-radius: 20px;
+        }
+        [class$="success"]{
+            color : green;
+        }
+        [class$="danger"]{
+            color : red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h2>1. 태그 선택자</h2>
+
+    <p>모든 p태그에 스타일이 적용됩니다.</p>
+
+    <p>여기!</p>
+
+    <p>그리고 여기!</p>
+
+    <hr>
+
+    <h2>2. 아이디 선택자</h2>
+
+    <p id="p1">아이디 지정된 것만 영향을 받습니다.</p>
+
+    <p>이 단락은 아이디 선택자의 영향을 받지 않습니다</p id="p1">
+
+    <hr>
+
+    <h2>3. 클래스 선택자</h2>
+
+    <p>클래스는 여러 요소를 대상으로, 여러 종류를 적용할 수 있습니다.</p>
+
+    <p class="font40">40px 크기의 텍스트</p>
+
+    <p class="font40 font50 right">40px 크기의 텍스트와 오른쪽 정렬</p>
+
+    <p class="font50 right">50px 크기의 텍스트와 오른쪽 정렬</p>
+
+<!-- class는 스타일 시트 상 위에 있을 수록 먼저 적용 (최종적으로는 맨 아래쪽으로 덮임) -->
+
+<hr>
+
+<h2>4. 그룹 선택자</h2>
+
+<h3>그룹 선택자는 여러 요소를</h3>
+
+<h4>한 번에 선택할 수 있습니다</h4>
+
+<div>
+    <ul class="fruits">
+        <li id="apple">사과</li>
+        <li class="berry">딸기</li>
+        <li>수박</li>
+        <li>바나나</li>
+        <p>수박</p>
+    </ul>
+</div>
+<div>당근</div>
+<p>포도</p>
+<span>수박</span>
+
+<hr>
+<!-- emmet 단축 기능 -->
+<!-- 자식 노드 생성 : > -->
+<!-- div>ul>li -->
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+
+<!-- 형제 자매 노드 생성: + -->
+<!-- div+p+span -->
+<div></div>
+<p></p>
+<span></span>
+
+<!-- 출력 횟수 만큼 반복 : * -->
+<!-- li*3 -->
+<li></li>
+<li></li>
+<li></li>
+
+
+<!-- 예제 -->
+<!-- div>dl>(dt+dd)*3 -->
+<div>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+</div>
+
+<!-- id, class 속성 적용 -->
+<!-- div#header.nav -->
+<div id="header" class="nav"></div>
+
+<!-- 넘버링 : $-->
+<!-- ul>li.item$*5 -->
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+</ul>
+<!-- ul>li.item$$*5 -->
+<ul>
+    <li class="item01"></li>
+    <li class="item02"></li>
+    <li class="item03"></li>
+    <li class="item04"></li>
+    <li class="item05"></li>
+</ul>
+
+<!-- text : {} -->
+
+<a href="https://www.naver.com">네이버</a>
+<li>list</li>
+<!-- li*5{리스트$} -->
+<li>리스트1</li>
+<li>리스트2</li>
+<li>리스트3</li>
+<li>리스트4</li>
+<li>리스트5</li>
+
+<hr>
+<!-- 가상 클래스 선택자 -->
+<a href="">test</a><br/>
+<input type="text" placeholder="값을 입력하세요">
+
+<hr>
+<!-- :first-child -->
+<div>
+    <ul class="fruits">
+        <li id="apple">사과</li>
+        <li class="berry">딸기</li>
+        <li>수박</li>
+        <li>바나나</li>
+        <p>수박</p>
+        <p>수박2</p>
+    </ul>
+</div>
+
+<hr>
+
+<!-- 가상 요소 선택자 -->
+<ul class="before">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+
+<hr>
+<!-- 속성 선택자 -->
+<button class="btn-success">Success</button>
+<button class="btn-danger">Danger</button>
+<button>normal</button>
+
+
+</body>
+</html>
