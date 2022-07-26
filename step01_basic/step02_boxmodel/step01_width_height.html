@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step07_boxmodel</title>
+    <style>
+        div{
+            background-color : tomato;
+            width : auto;
+            /* height : 20px; */
+        }
+        span {
+            /* 중요 : 인라인 요소는 가로 혹은 세로의 너비를 가질 수 없다. 
+            content의 길이를 조절하여 크기를 조정한다 */
+            width: auto;
+            height : auto;
+            background-color: tan;
+            
+        }
+
+        .parent{
+            width : 100px;
+            height: 200px;
+            border: 3px solid teal;
+            background-color: white;
+        }
+
+        .child{
+            max-width: 500px;
+            min-width: 100px;
+            max-height: 200px;
+            min-height: 100px;
+            background-color: midnightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- block or inline element default value -->
+    <div></div>
+    <span>content</span>
+    <hr>
+    <!-- max , min -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

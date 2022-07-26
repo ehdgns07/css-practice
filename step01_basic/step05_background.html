@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step05_background</title>
+    <style>
+        p {
+            /* background-color: rgb(244,100,150); */
+            background-color: #FFF9CA;
+        }
+        
+        div {
+            /* background-image : url(https://cdn.pixabay.com/photo/2022/07/13/10/54/mountains-7319059_960_720.jpg); */
+            width : 900px;
+            height: 639px; 
+            /* repeat */
+            background-repeat: repeat-x;/* 수평방향으로만 반복 */
+            background-repeat: repeat-y;/* 수직방향으로만 반복 */
+            background-repeat: no-repeat;/* 반복 안함 */
+        }
+
+        .direction{
+            background-image : url(https://static.thenounproject.com/png/729211-200.png);
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+
+        section {
+            height : 300px;
+            border : 2px dashed black;
+            
+        }
+
+        .section2 {
+            background-image : url(https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg);
+            background-size : auto 100%;
+            background-repeat: no-repeat;
+            background-position : right bottom;
+            background-attachment: fixed;
+        }
+
+        .pic {
+            background-image : url(https://static.thenounproject.com/png/729211-200.png);
+            width : 400px;
+            height : 300px;
+            border : 2px solid red;
+            background-size : contain; /* 좁은 곳을 기준으로 크기를 맞춤 */
+
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- bg-color -->
+    <p>배경 색상 적용</p>
+
+    <!-- bg-image -->
+    <!-- <div></div> -->
+
+    <!-- bg-repeat -->
+
+    <!-- bg-position -->
+    <!-- <div class="direction"></div> -->
+
+    <!-- bg-attachment -->
+    <!-- default : scroll(이미지가 같이 스크롤 됨) -->
+    <section class="section1"></section>
+    <section class="section2"></section>
+    <section class="section3"></section>
+    <section class="section4"></section>
+    <section class="section5"></section>
+
+    <!-- background-size -->
+    <!-- default : auto(원래 크기)
+                   cover(이미지 크기의 비율을 유지한채로 더 넓은 쪽의 크기에 맞춤)
+                   contain(이미지 크기의 비율을 유지한채로 더 좁은 쪽의 크기에 맞춤) -->
+    <div class="pic"></div>
+
+</body>
+</html>

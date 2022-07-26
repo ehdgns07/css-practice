@@ -12,17 +12,98 @@
         font-weight: 700; /* bold 와 같은 값 */
     }
     
+    /* fontsize: 단위 - px, cm, em, % 등등 */
     div{
         /* 16px(default) */
         font-size : 16px;
 
     }
+
+    /* 1.절대 크기 (cm, px)
+       2.상대 크기(%, em, rem)*/
+
+    html{
+        font-size : 16px;
+    }
+
+    body *{
+        border : 2px solid;
+    }
+
+    .container{
+        width : 200px;
+        font-size : 10px;
+    }
+
+    .parent{
+        /* width : 100px; */
+        /* width : 50%; */
+        /* %는 부모 요소로 영향을 받는 부분 */
+        width : 10em;
+        font-size : 1em;
+        /* em: 부모를 기준으로 font-size 10px 상속받은것과 같음 */
+        
+    }
+
+    .child{
+        /* width : 50px; */
+        /* font-size : 1em; */
+        width: 5rem;
+        /* 5*16px = 80px 최상위 픽셀을 가져와서 곱함 */
+    }
+
+    .container2{
+        height : 100vh;
+        width : 50vw;
+        /* v : view(화면 전체 view port) h:height, 100vh는 현재 화면 기준 화면 전체 */ 
+        /* v : view(화면 전체 view port) w:width, 100vw는 현재 화면 기준 화면 절반 */ 
+    }
+
+    /* font family */
+    .serif{
+        font-family: serif;
+    }
+
+    .sans-serif{
+        font-family : sans-serif;
+        }
+
+    .monospace{
+        font-family : monospace;
+    }
+    
 </style>
 <body>
     <p>
         폰트 두께입니다.
     </p>
-
+    
     <div> 폰트 사이즈 입니다.</div>
+    
+    <!-- 단위 디테일 -->
+    
+    <div class="container"> 컨테이너
+        <div class="parent"> 부모
+            <div class="child">자식1</div>
+            <div class="child">자식2</div>
+        </div>
+    </div>
+
+    <div class="container2"></div>
+
+    <hr>
+    <!-- font family -->
+<!-- serif : 바탕체
+sans-serif : 고딕체
+monospace : 가로폭 동등 고정너비 계열
+cursive : 필기체
+fantasy : 장식 (재미표현) 계열 -->
+<div class="serif">Hello, CSS</div>
+<div class="sans-serif">Hello, CSS</div>
+<div class="monospace">Hello, CSS</div>
+<div class="cursive">Hello, CSS</div>
+
+<hr>
+
 </body>
 </html>
