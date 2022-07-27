@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+</head>
+<style>
+
+article:nth-child(1) { margin-bottom : 50px }
+
+article .pic {
+    width : 100px;
+    height: 100px;
+    background : navy;
+    float : left;
+    margin : 10px;
+}
+
+/* float 적용점 */
+
+article:nth-child(2){
+    margin-bottom : 50px;
+}
+
+.box {
+    width : 100px;
+    height : 100px;
+    background : gold;
+    margin : 10px;
+    float : left;
+}
+
+/* float 단점 해결 */
+
+article:nth-child(3){
+}
+
+ul {
+    padding : 15px 20px;
+    background : red;
+     /* 1번째 방법 */
+    /* float : left; */
+    /* 2번째 방법 */
+    /* overflow : hidden; */
+    /* 3번째 방법 */
+    /* display : inline-block; */
+    /* 5번째 방법 explorer 는 지원 X */
+    /* display: flow-root; */
+}
+/* 4번째 방법(부작용 최저) */
+/* 부모 요소에 가상요소 after를 부여하고 clear : both를 적용하면 해결 가능 */
+ul::after {
+    content : '';
+    display : block;
+    clear: both;
+}
+
+ul li {
+    margin : 5px;
+    padding : 5px 10px;
+    list-style : none;
+    background-color : gold;
+    float : left;
+}
+
+</style>
+<body>
+    <!-- float : 요소를 좌우 방향으로 띄워줌(수평 정렬) -->
+    <article>
+        <div class="pic"></div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi earum maiores harum. Incidunt sunt nemo ipsum. Culpa qui, voluptatum, nesciunt numquam nostrum deserunt iste recusandae dolorem dolores, quas omnis saepe!
+            Ullam tempora, veritatis omnis alias praesentium possimus tempore vitae quis culpa sunt, nemo quas. Fuga placeat, voluptatum quos architecto assumenda vel obcaecati eaque ullam, dignissimos neque praesentium possimus, nihil sit.
+            Doloribus officia eligendi totam blanditiis, voluptas modi? Voluptatibus culpa eveniet aliquam expedita neque quos fugit sed sequi illum. Quia ut eos omnis molestiae facilis nobis voluptates illo enim laborum doloremque.
+    </article>
+
+    <!-- float 적용점 -->
+    <article>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </article>
+
+    <!-- float 단점 : 원하는 위치에 놓기 까다롭다 
+    빈 공간 발생시 원치않는 위치 조정이 일어남 -->
+<article>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+</article>
+
+<div>float의 문제를 어떻게 해결할 것인가</div>
+    
+</body>
+</html>
