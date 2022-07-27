@@ -1,0 +1,35 @@
+.stamp {
+    position : relative;
+    bottom : 225px;
+    right : 135px;
+}
+
+.env-div {
+    
+}
+
+.address { 
+    position : relative;
+    bottom : 90px;
+    left : 30px;
+    font-family: 'Hi Melody', cursive;
+    font-size : 25px;
+}
+
+/* .stamp {
+    position : absolute;
+    bottom : 225px;
+    right : 490px;
+}
+
+.env-div {
+    position : relative;
+}
+
+.address { 
+    position : absolute;
+    bottom : 30px;
+    left : 30px;
+    font-family: 'Hi Melody', cursive;
+    font-size : 25px;
+} */

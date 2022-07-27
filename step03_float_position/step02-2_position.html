@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position2</title>
+</head>
+<style>
+    .container {
+        width : 300px;
+        height : 400px;
+        line-height : 400px;
+        background : gold;
+        text-align: center;
+    }
+
+    .info {
+        background : red;
+        display : inline-block;
+        vertical-align: middle;
+        /* 문제 발생 */
+        /* 태그와 태그 사이(코드)에 빈 공간이 있으므로 문제 발생 */
+        width : 100%;
+
+        /* 해결법 */
+        margin-left : -6px;
+        line-height: normal;
+    }
+    
+    .vertical-center {
+        display : inline-block;
+        height : 100%;
+        vertical-align: middle;
+        /* width : 5px;
+        background : green; */
+    }
+
+
+</style>
+<body>
+    <!-- 수평(중앙) 정렬 -->
+    <!-- 인라인 요소 라면? -->
+    <!-- text-align : center -->
+    
+    <!-- 블록 요소라면? -->
+    <!-- margin : 0 auto; -->
+
+    <!-- 수직 정렬 -->
+    <div class="container">
+        <div class="vertical-center"></div>
+        <div class="info">
+            <h1>name</h1>
+            <p>fullstack</p>
+        </div>
+    </div>    
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+html {
+    /* background-image : url(http://filesvr.dureraum.org/cinema/rbs/data/crossEditor/images/000075/20201222080734678_62B8POUF.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;  */
+}
+
+.hero-header{
+    background-image : url(http://filesvr.dureraum.org/cinema/rbs/data/crossEditor/images/000075/20201222080734678_62B8POUF.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height : 2000px;
+}
+#navbar a {
+    color : White;
+    font-weight: bold;
+    font-size : 30px;
+    text-decoration : none;
+}
+.helper {
+    height : 300px;
+    vertical-align : middle;
+}
+
+.info {
+    display : flex;
+    /* position : absolute; */
+    flex-direction : column;
+    vertical-align : middle;
+    justify-content : center;
+    align-items : center;
+    color : red;
+
+}
+.info h1 {
+    /* color : white; */
+    font-size : 50px;
+    margin : -5px;
+}
+
+.info h2 {
+    /* color :white; */
+    font-size : 24px;
+}
+
+.info a {
+    border : 1px solid;
+    text-decoration: none;
+    text-align : center;
+    color : red;
+    font-size : 30px;
+    margin-top : 30px;
+    padding : 10px 70px;
+}
