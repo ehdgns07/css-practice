@@ -1,0 +1,73 @@
+* {
+    /* box-sizing: border-box; */
+    font-family: 'Noto Sans KR', sans;
+}
+
+html {
+    background: gold;
+}
+
+.loginform {
+   margin : 200px;
+}
+
+.inner {
+    width : 400px;
+    height : 400px;
+    background : lightgrey;
+    text-align : center;
+    border-radius: 10px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.id {
+    width : 220px;
+    border-radius: 5px;
+    padding : 10px;
+    margin-top : 50px;
+}
+
+.pwd {
+    width : 220px;
+    border-radius: 5px;
+    margin-top : 20px;
+    padding : 10px;
+}
+
+.submit {
+    margin-top : 50px;
+    width : 240px;
+    padding : 10px;
+    background : gold;
+    color : white;
+}
+
+input {
+    border :none;
+}
+
+.pretty {
+    padding-top : 50px;
+    height : 400px;
+}
+
+.title {
+    font-size : 30px;
+    margin-bottom : 80px;
+}
+
+.forgot {
+    margin-top: 20px;
+    font-size : 12px;
+    
+}
+
+a {
+    text-decoration: none;
+    color : grey;
+}
+
+input:focus {
+    outline: none;
+}
