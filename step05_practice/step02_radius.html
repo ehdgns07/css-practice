@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radius</title>
+    <style>
+        /* img {
+            width : 800px;
+            margin : 30px; */
+            /* border-radius : 30px; */
+            /* border-top-left-radius: 30px; */
+            /* /를 기준으로 앞쪽은 상,하단의 굴곡을 의미, 뒤쪽은 좌,우의 굴곡을 의미 */
+            /* border-radius: 10px / 30px; */
+            /* 순서대로 시계방향 */
+            /* border-radius: 10px 20px 30px 40px / 5px 10px 50px 100px; */
+            /* border-radius: 30% 70% 40% 50% / 50%;
+        } */
+
+        .bg-img {
+            display : flex;
+            width : 630px;
+            margin : 20px;
+            /* border : 3px dashed red; */
+            flex-wrap: wrap;
+        }
+
+        img {
+            width : 300px;
+            margin : 5px;
+        }
+
+        img:nth-child(1){
+            border-radius: 50% 100% 0 100%;
+        }
+
+        img:nth-child(2){
+            border-radius: 100% 50% 100% 0;
+        }
+        
+        img:nth-child(3){
+            border-radius: 100% 0 100% 50% ;
+        }
+
+        img:nth-child(4){
+            border-radius: 0 100% 50% 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <img src ="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beautiful-tropical-sunset-scenery-two-sun-beds-royalty-free-image-1595368231.jpg" alt="summer"> -->
+    <div class="bg-img">
+    <img src="https://cdn.pixabay.com/photo/2020/05/13/11/38/cherry-blossoms-5167156_960_720.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_960_720.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2013/10/27/17/14/snowfall-201496_960_720.jpg" alt="">
+</div>
+</body>
+</html>

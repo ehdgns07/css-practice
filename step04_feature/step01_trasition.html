@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width : 100px;
+            height: 100px;
+            background : gold;
+            margin : 50px;
+
+            transition : 1s ease ;
+            /* 타이밍 지정 */
+            /* ease 빠르게 느리게 왔다갔다 */
+            /* ease in/out 느리게-빠르게 / 빠르게-느리게 */
+            /* linear 일정하게 */
+            /* cubic-bezier(n,n,n,n) : */
+            transition-timing-function: ease-in;
+            transition : 1s 2s steps(4);
+        }
+
+        .box:hover {
+            width : 300px;
+            background :darkgreen;
+
+        }
+
+    
+        </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+</html>

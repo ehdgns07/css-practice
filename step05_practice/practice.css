@@ -1,0 +1,38 @@
+body {
+    font-size : 3rem;
+    text-align : center;
+}
+
+.contatainer {
+    height: 100vh;
+    scroll-snap-type: y proximity;
+    overflow : auto;
+}
+
+.area {
+    height : 100vh;
+    scroll-snap-align: start;
+    display : flex;
+    /* vertical-align : middle; */
+    justify-content : center;
+    align-items : center;
+    flex-direction: column;
+}
+
+.area:nth-child(2n-1) {
+    background-color : green;
+}
+
+.area:nth-child(2n) {
+    background-color : crimson;
+}
+
+h1 {
+    color : white;
+    margin-bottom : 20px;
+}
+
+p {
+    color : white;
+    font-size : 16px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background :tomato;
+        display: flex;
+        align-items : center;
+        justify-content : center;
+
+        /* transform : rotate(10deg); */
+        /* transform : translate(100px, 100px) rotate(10deg); */
+        transition : 1s;
+    }
+
+    .box:hover {
+        /* position : relative;
+        left : 30px;
+        top : 30px; */
+
+        /* 1.5배 커짐 */
+        /* transform : translate(100px, 100px) scale(1.5); */
+
+        /* 쥐어 짜기 */
+        /* transform : skew(10deg, 10deg); */
+    }
+
+    img {
+            width : 300px;
+            border : 1px solid red;
+            transform : perspective(500px), rotateX(30deg);
+        }
+
+    .change {
+            width : 400px;
+            height : 400px;
+            border : 1px solid red;
+            background : red;
+            transition : 1s;
+
+        }
+
+    .change:hover{
+        border-radius : 200px;
+        transform : translate(400px, 0px);
+    }
+
+</style>
+<body>
+    <!-- transform은 요소의 반환 효과를 지정 -->
+    <!-- transform 변환함수1,2,3 ... -->
+    <!-- 원근법, 이동, 크기, 회전, 기울기 -->
+    
+    <!-- 2D 변환 함수 -->
+    
+    <div class="box">box</div>
+
+
+    <!-- 3d 변환 함수 -->
+    <img src="https://cdn.pixabay.com/photo/2022/07/07/07/25/dog-7306691_960_720.jpg" alt="">
+
+    <div class="change"></div>
+
+    </div>
+</body>
+</html>

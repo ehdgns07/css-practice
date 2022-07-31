@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <style>
+        body {
+            font-size : 3rem;
+            text-align : center;
+        }
+
+        .container {
+            height : 100vh;
+            /* 수직(y축)축으로 스크롤을 할 경우 */
+            /* scroll-snap-type : y; */
+            scroll-snap-type : x proximity;
+            overflow : auto;
+            display : flex;
+            /* flex는 모든 컨텐츠를 하나의 flex 박스에 담는 개념도 있다. */
+        }
+
+        .area {
+            height : 100vh;
+            width : 50vw;
+            /* flex : none으로 flex 설정을 해제 해준다. */
+            flex :none;
+            scroll-snap-align: start;
+        }
+
+        .area:nth-child(2n-1) {
+            background-color : gold;
+        }
+
+        .area:nth-child(2n) {
+            background-color :dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="area">1</div>
+        <div class="area">2</div>
+        <div class="area">3</div>
+        <div class="area">4</div>
+        <div class="area">5</div>
+    </div>
+</body>
+</html>

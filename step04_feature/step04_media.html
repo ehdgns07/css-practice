@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @media screen and (max-width : 768px){
+            body {
+                background : gold;
+            }
+
+            .text {
+                font-size : 10px;
+            }
+        }
+
+        @media screen and (min-width : 1024px){
+            .text {
+                font-size: 30px;
+            }
+        }
+
+        .fa-home {
+            color : red;
+            font-size : 30px;
+            position : relative;
+            top : 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 모바일 우선으로 고려 -->
+    <!-- minimum을 기준으로 작성
+    
+        가로 567px보다 큰 화면에 적용
+    @media screen and (min-width : 576px)
+        가로 768px보다 큰 화면에 적용
+    @media screen and (min-width : 768px)
+                    .
+                    .
+                    .
+    -->
+
+    <!-- 데스크탑 우선 고려
+        
+        가로 576px보다 작은 화면에 적용
+    @media screen and (max-width : 576px)
+        가로 768px보다 작은 화면에 적용
+    @media screen and (max-width : 768px)
+                    .
+                    .
+                    .
+     -->
+
+     <div class="text">adf</div>
+
+     <i class="fa-solid fa-house"></i>
+     <i class="fas fa-home"></i>
+</body>
+</html>
+
