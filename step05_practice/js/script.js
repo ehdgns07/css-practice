@@ -5,10 +5,6 @@ const emailBtn = document.querySelector('.contact-btn')
 // 버튼 이름이 메뉴라고 한다면 숨겨져 있던 nav가 화면에 나타나야 함.
 // 버튼 이름이 Close가 되어야 함.
 
-function(){
-    emailjs.init("ehdgns07");
-}
-
 btn.addEventListener('click', () =>{ 
     nav.classList.toggle('open-menu');
     
